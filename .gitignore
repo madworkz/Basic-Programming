@@ -1,0 +1,11 @@
+# Ignore compiled C/C++ binaries
+a.out
+*.exe
+*.out
+*.o
+*.obj
+hello   # name of your compiled output
+
+# Optional: ignore any executable file with no extension (on Unix/macOS)
+# Matches files with no extension
+*~
