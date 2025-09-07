@@ -24,17 +24,20 @@ Table of 6 is:
 */
 int main()
 {
-    int number;
+    double number;
 
     // Ask user for input
     printf("Enter the number you want the multiplication of:\n");
-    scanf("%d", &number);
+    if (scanf("%lf", &number) != 1) {
+        printf("Warning: Invalid input provided. Please enter a valid number.\n");
+        return 1;
+    }
 
     // Print the table
-    printf("Table of %d is:\n", number);
+    printf("Table of %.2lf is:\n", number);
     for (int i = 1; i <= 10; i++)
     {
-        printf("%d x %d = %d\n", number, i, number * i);
+        printf("%.2lf x %d = %.2lf\n", number, i, number * i);
     }
     /* code */
     return 0;
